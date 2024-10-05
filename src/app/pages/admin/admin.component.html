@@ -1,0 +1,19 @@
+<div style="text-align:center">
+    <h1>Roles</h1>
+    <button (click)="clickEvent()">Listar</button>
+</div>
+<button (click)="logout()">Logout</button>
+<br/>
+<table style="width:80%" id="printarea">
+    <tr>
+      <th>Date</th>
+      <th>ApplicationStatus</th> 
+      <th>SubmittedBy</th>
+    </tr>
+    <tr  *ngFor="let a of dataRole">
+      <td>{{a.roleId}}</td>
+      <td>{{a.roleDesc}}</td> 
+      <td>{{a.roleType}}</td>
+  
+    </tr>
+  </table>

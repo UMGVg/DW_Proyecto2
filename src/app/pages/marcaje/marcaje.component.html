@@ -1,0 +1,18 @@
+<div class="logo">
+  <img src="assets/images/logo.png" alt="Logotipo de la Universidad">
+</div>
+<div id="container">
+  <div id="central">
+    <div id="marcaje">
+      <div class="titulo">
+        Marcaje de Entradas y Salidas
+      </div>
+      <div class="clock-container">
+        <h1 id="date">{{ currentDate }}</h1>
+        <h1 id="clock">{{ currentTime }}</h1>
+      </div>
+      <button id="saveButton" (click)="sendDateTimeToDatabase()">Marcar</button>
+      <button id="logoutButton" (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </div>
+</div>

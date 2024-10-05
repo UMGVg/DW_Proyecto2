@@ -1,0 +1,27 @@
+<div class="login-card">
+  <div class="card-title">
+    <h1>Bienvenido</h1>
+  </div>
+  <!-- Formulario usando formGroup de Angular -->
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      formControlName="username"
+      placeholder="Usuario"
+      required
+    />
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Contraseña"
+      required
+    />
+    <button type="submit" title="Ingresar">Login</button>
+  </form>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div class="pie-form">
+    <a href="#">Reinicio de contraseña?</a>
+  </div>
+</div>
